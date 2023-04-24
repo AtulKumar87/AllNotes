@@ -1,0 +1,47 @@
+TempData:
+=========
+=> TempData is used to transfer data from an action method to view. It can also transfer data to next action method or next view.
+
+Ex: If we create a TempData in Index action method and we opens About action method after Index action method then value of TempData will be availavle in About action method also.
+
+=> TempData is an object of TempDataDictionary class.
+
+=> It's scope is limited to current action method/view and next action method or view. It is not available for any other action methods or view.
+
+=> TempData is a temporary form of Session.
+
+=> TempData works in key/value pair.
+
+=> We can also perform type conversion.
+
+Syntax: TempData["KeyName"]=value;
+Ex: TempData["Result"]="Result is: "+r;
+
+
+
+4) Object of Model class as Action method parameter(Strongly Typed View)
+-------------------------------------------------------------------------
+=> We can send bulk data from Controller to View by using object of model class.
+
+=> In this method we have to store record in object of model class and then we have to return that object from our action method.
+
+=> A View that processes object of a model class to load/display data is known as "Strongly typed view".
+
+=> We have to define name of our model class in our view by using "model" keyword. After that we can use model class in our view page by using "Model" object.
+
+
+
+
+
+
+
+**********************************************************************************************
+Task
+**********************************************************************************************
+Task 1:
+-------
+Create a strongly typed view to display record of a student having rno,name,father name,gender,age,class,city, on page load.
+
+Task2:
+------
+Create a strongly typed view to display record of an employee having fields-empid,name,gender,department,designation,salary on click of submit button in view

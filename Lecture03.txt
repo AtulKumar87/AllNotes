@@ -1,0 +1,81 @@
+1) Name of Form Controls as Action method parameter:
+====================================================
+=> TO get/read the values of form controls we can pass the names of Form controls in our action method as parameter.
+
+=> It is necessary to have same name of form controls and names of parameters in action methods.
+
+=> We don not have to perform explicit type conversion because in this method emplicit type conversion is used by MVC framework.
+
+=> The disadvantage is that if we have a long webform then we have to pass a very long list of parameters in action method.
+
+
+2) Object of FormCollection class as action method parameter:
+=============================================================
+=> FromCollection is a class in MVC.
+
+=> We can pass object of FormCollection class as action method parameter. In this case we do not have to pass a long list of parameters.
+
+=> To read valuse from the object of FormCollection class we have to perform type conversion as per our need.
+
+
+3) Object of Model class as Action method parameter:
+====================================================
+=> In this method we have to pass object of our model class in action method.
+
+=> Model class is a special class that is created for database operations inside "Models" folder.
+
+=> It is necessary to have same name of form controls and properties of model class.
+
+=> In this method we do not have to perform type converison and also we do not need to pass a long list of parameters.
+
+=> To use a model class in Contoller we have to use a namespace using "ProjectName.Models";
+
+Ex: using MVCDemo5.Models;
+
+
+Data Communication/Transfer from Controller to View:
+====================================================
+=> It is primary task to send response to View from a controller after performing some task.
+
+=> To send data from a Controller to view we have below methods-
+
+1) ViewData
+2) ViewBag
+3) TempData
+4) Object Of Model class(Strongly typed View)
+-----------------------------------------------------------------------
+
+1) ViewData:
+------------
+=> ViewData is an object of ViewDataDictinoary class.
+
+=> It is used to send some data from a controler to view.
+
+=> ViewData uses concpt of key/value pair.
+
+=> we can store any type of data in ViewData but it returns that value in string form so we have to perform type conversion.
+
+=> Its scope is limited between an action method to an view.
+
+Syntax:
+-------
+ViewData["KeyName"]=value;
+
+
+2) ViewBag:
+-----------
+=> It is used to send some data from a controller to View.
+
+=> We can store any type of value in ViewBag. We do not have to perform type conversion in ViewBag.
+
+=> ViewBag is also an object of ViewDataDictionary class but it uses dynamic expression. It not works in key/value pair concept.
+
+=> Scope of ViewBag is limited between an action method and a View.
+
+Syntax: ViewBag.DynamicExpression=value;
+
+Ex: ViewBag.Result=r;
+
+
+3) TempData:
+------------

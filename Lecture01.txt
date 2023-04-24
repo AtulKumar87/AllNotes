@@ -1,0 +1,158 @@
+Introduction to .NET:
+=====================
+=> Microsoft .NET is a platform that is used to develop the computer software and applications.
+ 
+=> Developed by Mrcrosoft corporation is year 2002.
+
+=> Latest version is ".NET Framework 4.8", released in 18 April 2019.
+
+=> Used to develop Console, Windows, Web Mobile, web services based application.
+
+=> .NET supports multiple languages like as Visual C++, VB.NET, Visual C#, Visual J++, Python, Pascal, Perl and many more...
+Architecture of .NET Framework
+===============================
+=> .NET Framework is build on two below components-
+
+1) Class Assemblies(Library)
+2) CLR (Common Language Runtime)
+
+Class Assemblies:
+=================
+=> Assemblies are built-in libraries in .NET Framework. That helps a programmer to easily develop a software by using built-in components.
+
+=> .NET Framework has a very long list of assemblies that is main cause of simplisity and popularity of .NET 
+Framework.
+
+=> Assemblies provides built-in features that makes easy to develop software in .NET Framework.
+
+=> Assemblies are available in form of namespaces.
+
+CLR(Common Language Runtime):
+=============================
+=> CLR is most important component of .NET framework.
+
+=> CLR is known as compiler of .NET as JVM in Java.
+
+=> CLR manages whole process of compilation, debugging, memory allocation, memory de-allocation, execution. So CLR works as a manager in .NET framework.
+
+=> CLR converts high-level language code into an intermediate code that is known as MSIL/IL(Microsoft Intermediate Language/Intermediate Language). MSIL is like byte code in Java.
+
+=> CLR is known as Framwork class library(FCL) or class library(CL).
+Below are the 4 main components of CLR:-
+
+A) CTS (Common Type System)
+B) CLS (Common Language Specification)
+C) GC  (Garbage Collector)
+D) JIT (Just In Time Compiler)
+
+
+Framework for web development in .NET
+=====================================
+=> ASP (Classic ASP) (old not used)
+=> ASP.NET (self control)
+=> ASP.NET MVC (html controls)
+=> ASP.NET Core 
+
+These frameworks are supported only two languages VB.NET and Visual C#.
+
+
+What is ASP.NET?
+==================================================================
+=> ASP.NET is an open-source, server-side Web application framwork designed for Web development.
+
+=> Used to build dynamic website, web applications and web services.
+
+=> ASP stands for "Active Server Pages".
+
+=> ASP.NET supports C# and VB.NET programming language.
+
+=> Latest version of ASP.NET is 5. This version was later separated from ASP.NET and brought into a new project called ASP.NET Core, whose versoning started at 1.0
+
+
+Creation of ASP.NET:
+=============
+=> First official version 1.0, of ASP.NET is released in 2002.
+
+=> developed by Scott Guthrie.
+
+
+
+
+=====================================================================================================================================
+Introduction to ASP.NET MVC:
+======================================================================================================================================
+
+=> ASP.NET MVC is a web application framework developed by Microsoft.
+
+=> ASP.NET MVC is a development framework for building web pages and web sites. MVC stands for Model View Controller.
+
+=> MVC is open-source software design pattern.
+
+=> ASP.NET MVC framework is a lightweight, highly testable framework that is integrated with existing ASP.NET features.
+
+
+
+Creation of .NET MVC:
+========================
+=> First official version 1.0 of ASP.NET MVC is released in 2009.
+
+=> Latest version of ASP.NET MVC is 6.0 that is released in year 2016.
+
+=> It is developed by Scoot Guthrie.
+
+
+Features of ASP.NET MVC:
+========================
+=> Separation of concern:
+   		MVC Framework separates important concern of a project like as- database(Model), designing(View), Progarmming(Controller) are created separately
+
+=> Lossely Coupling:
+		MVC framework easily links all the separated parts to compile and run application.
+
+=> Paralled Development
+		In MVC framework we can parallely develop design, database and programmin of an application.
+
+=> Easy to perform unit testing.
+		
+=> Test Driven Development (TDD) Support.
+
+=> Clear URL's
+
+=> Improved Performance
+
+=> More Controlling on HTML
+
+=> Introduced new concepts
+	-Filter		-Scaffolding Template
+	-Web API	-LINQ, etc
+
+=> Easy to Learn
+
+=> Task Support for Asynchronous Controllers
+
+=> Building and Minification
+
+======================================================================================
+Website:
+--------
+=> All the pages and files are uploaded to server.
+=> It is less secure because designing and programming files are present on server
+=> It fist compiled and run each time repeatedly when webpage is loaded.
+=> It's files are not encrypted.
+=> We need to upload programming file at the time of hosting of website.
+
+Web Application:
+----------------
+=> Only built file(DLL) file are uploaded to server.
+=> It is very secure because only build file(DLL) file are present on server.
+=> It is pre compiled and only run each time when webpage is loaded.
+=> It is encrypted.
+=> We don't need to upload programming file at the time of hosting of web page.
+
+Static Website:
+---------------
+=> In this type of website database are not used.
+
+Dynamic Website:
+----------------
+=> In this type of website database and server side programming languages are used.

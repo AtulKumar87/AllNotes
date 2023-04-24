@@ -1,0 +1,147 @@
+3) Object of Model Class As Action Method parameter
+===================================================
+=> In This method we have to pass object of our model class in action method.
+=> Model class is a special class is created for database operations inside "Models" folder.
+=> It is necessory to have same name of form controls and properties of model class.
+=> In this method we do not have to perform type conversions and also we do not need to pass a long list of parameters.
+=> To use model class in controller we have to use a namespace -using "ProjectName.Models";
+Ex: Using MVCDemo2.Models;
+=========================================================================================================
+Data Communication from Controller to View:
+---------------------------------------------------------------------------------------------------------
+=> It is primary task to send response to view from a controller after performing some task.
+=> To send data from a Controller to view we have below methods-
+
+1) ViewData
+2) ViewBag
+3) TempData
+4) Object of model class(Strongly Typed View)
+.........................................................................................................
+1) ViewData:
+-------------
+=> ViewData is an object of ViewDataDictionary class.
+=> It is used to send some data from a controller to view.
+=> ViewData uses concept of key/value pair.
+=> We can store any type of data in viewData but it returns that values in string from so we have to perform type conversion.
+=> Its scope limited between an action method to an view.
+
+Syntax:
+-------
+ViewData["KeyName"]=value;
+----------------------------------------------------------------
+2) ViewBag:
+-----------------------------------------------------------------
+=> It is used to send some data from a controller to view.
+=> We can store any type of value in ViewBag.We do not have to perform Type conversion in ViewBag.
+=> ViewBag is also an object of ViewDataDictionary class but it uses dynamic expression.It not works in key/value pair concept.
+=> Scope of viewBag is limited between an action method and a view.
+
+Syntax:
+-------
+ViewBag.dynamicExpression=value;
+Ex: ViewBag.Result=r;
+......................................................................
+3) TempData:
+---------------------------------------------------------------------
+=> TempData is used to transfer data from an action method to view. It can also transfer data to next action method or next view.
+
+Ex: If we creates a TempData in Index action method and we opens About action method after index action method then value of TempData will be available in about action method also.
+
+=> TempData is an object of TempDataDictionary class.
+=> Its scope is limited to current action method/view and next action method or view. Instead of that it is not available for any other action methods or view.
+=> TempData is a temporary from of session.
+=> TempData works in key/value pair.
+=> We also have to perform type conversion.
+
+Syntax: TempData["KeyName"]=value;
+Ex: 
+TempData["Result"]=res;
+
+.....................................................................
+4) Object of model class(Strongly typed View) as action method parameter:
+---------------------------------------------------------------------
+=> We can send bulk data from controller to View by using object of model class.
+=> In this method we have to store record in object of model class and then we have to return that object from our action method.
+=> a view that processes object of a model class to load/display data is known as "Strongly Typed View".
+=> We have to define name of our model class in our view by using "model" keyword.After that we can use object of that model class in our view page by using "Model" object.
+=> 
+==========================================================================================
+Layout Page:
+-----------------------------------------------------------------------------------------
+=> Layout page is used to write common parts of various view pages.
+=> Layout page containts common part of designing for various pages.
+=> Layout page is also known as Master Page.
+=> Layout page can not-run indivisually.It always runs with a normal view page(child page).
+=> In Layout page we have to call RenderBody() function for reserving a portion to child page(normal view page).
+=> Layout pages are created inside a "Shared" folder that is located under View Folder.
+
+===================================================================================================================
+HTML HELPER:
+------------------------------------------------------------------------------------------------------------------
+=> HTML HELPER is a class in .NET MVC that helps to create HTML form controls programatically.
+=> HTML helper class provides various built-in methods that are used to create HTML controls.
+=> HTML helper healps a programmers to create HTML controls dynamically by using programming language.
+=> We have a built-in object of HTML HELPER class in MVC that is "Html".
+=> HTML HELPER provides overloaded method to create form controls so we can use that methods as per our need.
+=> It is not mandatory to create Html controls by using Html HELPER class.But sometimes it helps to easily create Html controls by using programming.
+=> HTML HELPER controls are light-weight controls.
+=> Some important function of HTML helper class are-
+   (textbox(),RadioButton(),Password(),BeginForm(),TextArea(),DropDownList()) etc
+=================================================================================================================
+File Upload in MVC:
+-----------------------------------------------------------------------------------------------------------------
+=> To Upload a file a webform we have to use "enctype" attribute in form.
+=> Always use method="post" to upload a file.
+=> In .NET MVC we can read user uploaded file in our action method by using Request.Files.
+=> Request.Files returns object of "HttpPostedFileBase" class.
+=> HttpPostedFileBase class have below properties and function-
+
+A) ContentLength: This property is used to know the size of uploaded file in bytes in int form.
+B) FileName: This property is used to know the name of uploaded file.
+C) SaveAs(): This function is used to save uploaded file in server inside a folder.
+Notes: 
+1) Yadi pics ko save krte hai to save(server.mappath="folder path name")
+Ex: MyFile.SaveAs(Server.MapPath("/Content/UserPics/"+FName));
+
+2) Yadi koi big pic ko upload krna chahete hai to program file ke webconfig bale content pr click krke uski file ko bada sakte hai.
+
+<system.web>
+    <compilation debug="true" targetFramework="4.7.2" />
+    <httpRuntime targetFramework="4.7.2" maxRequestLength="10240" />
+  </system.web>
+
+=================================================================================================================
+                                                  :LINQ:
+-----------------------------------------------------------------------------------------------------------------
+=> LINQ is introduced in .NET framework 3.5 with visual studio 2008.
+=> LINQ is a Component of .NET framework.
+=> LINQ stands for "Language Integrated Query"(Query is a set of instractions to process,manupulate and fatch data from a source.).
+=> LINQ is used to process,manupulate and fetch data from various sources like as .xml,collection,files and data base.
+=> LINQ provides modern way to write over query.
+=> We can use LINQed in two ways.
+=> LINQ functionality is define under "system.LINQ" namespace.
+1) Query Syntax
+2) Extension Methods
+......................
+Syntax of LINQ Query:
+----------------------
+syntax: 
+ from object in Source (initilization)
+
+ where condition (condition)
+
+ select object (selection)
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Lamda Expression:
+------------------
+Object => object.PropertyName.
+==================================================================================================================
+Filters:
+------------------------------------------------------------------------------------------------------------------
+=> Filters are used to add some extra logic in MVC project.
+=> Filters add some code/logic to execute before or after the execution of an action method.
+=> Filters is a class in MVC that is used to execute some logic before or after the execution of an action method.
+=> There are various filters like authorize filters,Action filter,Exception filter and Result Filters etc.
+=> Filters are used to form of attributes before or after the action method.
+=> Filters are created in form of class.
+

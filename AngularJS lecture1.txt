@@ -1,0 +1,226 @@
+                                               Introduction to angularJS
+================================================================================================================================
+=>AngularJs is a very popular JavaScript framework.
+=>AngularJs is a structural framework for dynamic web pages.
+=>AngularJs is an open source and completely free.
+=>AngularJs provides option to write client side applications in MVC way.
+=>AngularJs is used to overcome the load on server.Many tasks can be performed in client side by using AngularJS.
+=>It is an excellent framework from building single page application(SPA). 
+=============================================================
+Creation Of AngularJS
+-------------------------------------------------------------
+=>Originally developed in 2009.
+=>Now AngularJS is maintained by Google.
+=>AngularJS version 1.0 was released in 2012.
+=>Latest version of AngularJS is 1.8.0 that is released in June 1, 2020.
+==============================================================
+Features of AngularJS:
+--------------------------------------------------------------
+=>Data binding
+=>Directives
+=>templates
+=>Services
+=>filters
+=>MVC Framework
+=>Dependency Injection
+=>Validation
+=>Routing
+=>Factories
+=>Cross Browser Supports
+===============================================================
+Angular JS Directives:
+---------------------------------------------------------------
+AngularJS directives are programming element of AngularJS.
+=>Each angularJS directives has its own meaning and work.
+=>Angular JS directives are added in HTML page like as attributes of HTML tags.
+=>Angular JS directives starts with a prefix "ng-".
+...............................................................
+NOTE: ng-app is an angularJS directives that defines Angular jS application.
+=>In ng-app directive we have to assign controller name.We can left in blank if no controller is defined.
+================================================================
+Angular JS expression:
+----------------------------------------------------------------
+=>Angular jS expression is also a programming element.
+=>Angular JS expression is used to performed mathematical operations in easy way.
+=>It is also used to bind/show value of model (variable).
+
+Syntax:
+--------
+        {{statement}}
+................................................................
+2)ng-model: 
+-----------
+=>This directive is used to bind some data to angularJS application.
+=>We can also bind value of controls (HTML controls)to angularJS application by using ng-model.
+=>We can used this value in whole application.
+
+syntax:
+-------
+        ng-model="data_name"
+..................................................................
+3)ng-bind:
+----------
+=>this directives is used to bind/show the value of angularJS application variables into HTML controls.
+ 
+ syntax:
+ -------
+        ng-bind="data_name"
+...................................................................
+4)ng-init:
+----------
+=>This directive is used to declare Angular JS application variables.
+=>We can declare variable, object and array by using this directive.
+=>init stands for initiliZation.
+
+syntax:
+-------
+       ng-init="variableName=value"
+....................................................................
+5)ng-repeat:
+------------
+=>This directive is used to repeat the execution.
+=>this directive work like forEach loop.
+=>ng-repeat directive is used to get items from collection.
+=>We can use this directive with array ,object of array.
+=>ng-repeat will create multiple controls of current tag.
+
+syntax:
+-------
+        ng-repeat="expression"
+
+NOTE: In ng-repeat we use "in" keyword to get each item from collection.		
+.......................................................................
+================================================================================================================================
+                                             Creating AngularJS module:
+--------------------------------------------------------------------------------------------------------------------------------
+=>AngularJS module is A NAME OF Angular JS application.
+=>We are creating module to create smooth communication between Model, View and Controller.
+=>We can create n number of modules in an AngularJS application.
+=>angular.module() function is used to create an AngularJS module.
+
+syntax:
+-------
+     angular.module("ApplicationName/ModuleName",[]);
+...............................................................................................................................	 
+NOTE:
+-----
+1) we can store the object of this new module in a variable for future use.
+Ex: var
+-------
+myModule=angular.module("ApplicationName/ModuleName",[]);
+................................................................................................................................
+2)[] bracket denotes that we are creating a new module.If we have to use an existing module then we have to pass name of that module in place of [].[] this bracket also defines that this new module is depend on existing modules.
+================================================================================================================================
+                                              Controller in AngularJS:
+--------------------------------------------------------------------------------------------------------------------------------
+=>Controller are main part of angularJS application.
+=>It contains programming logic.
+=>Controller provides way to communication between view and model.
+=>we can use a controller in angularJS application by using ng-controller directive.
+
+syntax:
+-------
+       ng-controller="ControllerName"
+	   
+=>we can create a controller by using controller() function.this controller function is defined inside angularJS modules.
+================================================================================================================================
+                                          syntax to Create AngularJS Controller:
+--------------------------------------------------------------------------------------------------------------------------------
+obj-of_Module.controller("ControllerName",function($scope){
+ //statement
+});
+
+NOTE: $scope is an angularJS application object.This $scope object/variable is used to add some data in angularJS application so that we can access that data in whole angularJS application.
+
+Ex:
+--
+  var app=angular.module("mymod",[]);
+  app.controller("myctrl",function($scope){
+         $scope.name='Atul kumar';
+  });  
+================================================================================================================================
+6)ng-click:
+---------
+=>This directive is used to perform some action on click of a HTML element.
+=>We can assign expression or function name to this directive.  
+................................................................................................................................
+7)ng-if:
+--------
+=>This directive is used to check for given condition.
+=>It shows the element or tag or block only when given condition becomes true.
+
+syntax: ng-if="expression"
+................................................................................................................................
+8)ng-switch:
+-----------
+=>ng-switch directive is used to display case based content.
+=>It works just like switch statement of programming.
+=>ng-switch is used with 3 below directive-
+  ng-switch
+  ng-switch-when
+  ng-switch-default
+...............................................................................................................................
+9)ng-bind-html:
+---------------
+=>This directive is used to bind content in innerHTML of a tag.
+=>It display the content in HTML format.
+================================================================================================================================
+                                            Filters In AngularJS:
+--------------------------------------------------------------------------------------------------------------------------------
+=>Filters are used to filter data in page.
+=>By using Filters we can change case,sort and search items in our web page.
+=>AngularJS provides below filters-
+=>Filters are used by using |(pipe) symbol.
+
+1)upperCase:
+-----------
+             It is used to print a string in upperCase.
+			 
+2)lowerCase:
+------------
+             It is used to print a string in lowerCase.			 
+			 
+3)currency:
+-----------
+             It is used to display currency symbol before amount.
+			 By Default is display $ symbol.
+			 
+4)filter:
+--------- 
+             It is used to search items from collection.
+			 
+syntax: Each_Item_from_collection | filter : 'searchValue'
+
+5)orderBy:
+---------
+             it is used to sort the items of a collection.
+			 
+syntax: Each_Item_from_collection | orderBy : 'VariableName' 
+            
+			 To sort items in reverse order use '-' symbol before property name.
+====================================================================================================================
+                                       **************************
+....................................................................................................................
+10)ng-disabled:
+---------------
+=>This directive is used to enable or disable a tag.
+=>This directive needs a boolean value.
+....................................................................................................................
+11)ng-show:
+-----------
+=>this directive is used to show specification element.
+=>this directive needs a boolean value.
+....................................................................................................................
+12)ng-hide:
+-----------
+=>this directive is used to hide specification element.
+=>this directive needs a boolean value.
+....................................................................................................................
+13)ng-class-odd:
+----------------
+=>This directive is used to assign a class for add item of collection like table, option,li etc.
+....................................................................................................................
+13)ng-class-even:
+----------------
+=>This directive is used to assign a class for add item of collection like table, option,li etc.
+....................................................................................................................

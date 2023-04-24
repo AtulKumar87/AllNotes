@@ -1,0 +1,112 @@
+Razor block:-  @{}
+----------------------
+IsPost:
+-------
+=> IsPost is a property in .NET MVC that is used to know the postback status of a webpage.
+
+=> When a page loades for first time/page directly comes from server that time IsPost property will be "false" and when we clicks on submit button or when we sends the data of webpage into server and page comes back from server that time IsPost property will be "true".
+
+1) Views in MVC:
+===============
+=> Views are GUI part of an MVC Application.
+
+=> We can design our webpage in Views.
+
+=> In MVC Views are created inside "Views" folder.
+
+=> In MVC a View can contain HTML and C# both hence extension of a View page ".cshtml"
+
+=> Views are processed by a view engine that is known as "Razor View Engine".
+
+=> Various types of Views are - Simple View, layout View(Master Page),Partial View.
+
+
+2) Controllers in MVC:
+======================
+=> In MVC; C stands for "Controller".
+
+=> Controllers are the main part of a MVC application.
+
+=> Controller contsins all the business logic/programming(code) of project.
+
+=> Controllers are create inside "Controllers" folder.
+
+=> Controllers are created as form of a class. All controller classes must have to inherit "Controller" class.
+
+=> Controllers are collection of various functions/methods.
+
+=> main types of Controllers are- Simple Controller, Asynchronous Controller, API Controller.
+
+Types of Methods in a Controller:
+=================================
+1) Action Method
+2) Non-Action Method
+
+1) Action Method:
+-----------------
+=> Action methods are special types of methods that processes a specific View.
+
+=> Action methods are callable by View. That methods are automatically called by View pages during load and reload of view pages.
+
+=> Generally an action method returns object of "ActionResult" class but we can return object of another class also that is present in family of "ActionResult" class as per our need. Like as we can also return object of "JsonResult" class.
+
+=> We have to create separate Action methods for all the views.
+
+Types of Action Methods:
+========================
+A) Get Action Method:
+   => It is used to load a View page for first time. Hence when our page(View) comes directly from server then that View is processed by getaction method.
+
+  => To define a get action method we have to use [HttpGet] attribute before function definition.
+
+B) Post Action Method:
+   => It is used to load a view page after submitting the data of form to server.
+   => This action method processes a View page on click of submit button.
+   => To define a post action method we have to use [HttpPost] attrubute before function  definition.
+
+Note:
+-----
+=> It is necessary to have same name of get and post action method for a specific view. Hence we have to overload get and post action method.
+
+2) Non-Action Method:
+---------------------
+=> Non-Action methods are normal User Define Functions that are created by programmer to fullfill some requirement.
+
+=> Non-action methods can not be directly call from View page.
+
+=> We have to use [Non-Action] attribute before a Non-action method.
+
+
+
+Data Communication from View to Controller:
+-------------------------------------------
+=> It is primary task to read data of view page inside an action method in controller.
+
+=> We can send data of a View inside an action method by using below methods-
+
+1) Name of Form Controls as Action method parameter
+
+2) Object of FormCollection class as action method parameter
+
+3) Object of a Model class as Action method parameter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Task1:
+------
+Create an Application to read your name, age and city from a form and print that details inside a div tag on click of submit button.
+
+Task2:
+------
+=> Create a MVC application to read and add two numbers.
